@@ -1,0 +1,92 @@
+body {
+  font-family: $sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    background-color: $bg;
+    padding-top: 4px;
+  }
+  &::-webkit-scrollbar:vertical {
+    width: 16px;
+  }
+  &::-webkit-scrollbar:horizontal {
+    height: 16px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    border: 4px solid $bg; /* should match background, can't be transparent */
+    background-color: rgba($ink-1, .25);
+  }
+}
+
+
+// Colors
+.ink {
+  color: $ink-1;
+}
+.ink-light {
+  color: $ink-2;
+}
+.ink-lighter {
+  color: $ink-3;
+}
+.ink-lightest {
+  color: $ink-4;
+}
+.red {
+  color: $red;
+}
+
+// Text
+.caption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  &.info {
+    margin-top: -8px;
+  }
+}
+.body {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.subheading {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.display-small {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+.display-medium {
+  font-family: "SF Pro Display";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+}
+.display-large {
+  font-family: "SF Pro Display";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+// Spacing
+
+.mb-8 {
+  margin-bottom: 8px !important;
+}
+.mb-16 {
+  margin-bottom: 16px !important;
+}

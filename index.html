@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobAdder 🐍 – Design System</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/venom.css">
+</head>
+
+<body>
+  <div class="main">
+
+    <header>
+      <svg height="28" viewBox="0 0 217 28" width="217" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#007fe0" fill-rule="evenodd" transform="translate(1 -7)">
+          <path d="m139.22 25.69h2.49c4.77 0 8.31-2.4 8.31-8.04 0-5.28-2.58-8.07-7.98-8.07h-2.82zm13.35-7.89c-.03 6.54-3.81 10.2-10.5 10.2h-5.37v-20.7h5.4c6.75 0 10.47 3.69 10.47 10.5zm8.51-2.52c-2.58 0-3.81 1.95-3.93 4.29h7.95c-.06-2.52-1.35-4.29-4.02-4.29zm5.94 10.56c-1.62 1.71-3.36 2.34-5.67 2.34-4.5 0-6.72-3.42-6.72-7.41 0-3.96 2.1-7.59 6.45-7.59 4.86 0 6.3 3.69 6.3 7.71 0 .21-.06.6-.06.6h-10.17c.03 2.46 1.44 4.56 4.17 4.56 1.68 0 2.91-.33 4.08-1.53zm7.53 2.46c-2.76 0-4.89-1.71-5.52-3.69l1.98-1.02c.45 1.41 1.8 2.58 3.54 2.58 1.5 0 2.85-.63 2.85-2.28 0-3.57-7.83-1.2-7.83-6.63 0-2.55 2.25-4.11 4.68-4.11 2.46 0 4.08 1.35 4.95 2.91l-1.83 1.05c-.6-1.11-1.53-1.95-3.12-1.95-1.35 0-2.46.63-2.46 2.04 0 3.03 7.92.84 7.92 6.57 0 2.88-2.49 4.53-5.16 4.53zm10.5-21.09v2.97h-2.7v-2.97zm-.15 20.79h-2.4v-14.64h2.4zm4.86 1.83c0 .39.39 2.73 4.53 2.73 1.77 0 4.35-.42 4.35-2.58 0-2.58-3.51-1.89-6.3-2.13zm4.5-8.49c1.77 0 2.94-1.32 2.94-3.09s-1.14-3.12-2.94-3.12-2.94 1.35-2.94 3.12 1.17 3.09 2.94 3.09zm2.7-7.56c.39-.12 2.1-1.83 2.4-2.1l1.32 1.77-2.16 1.59c.66.84 1.08 1.89 1.08 3.21 0 3.15-2.34 5.01-5.34 5.01-1.2 0-2.31-.33-3.15-.84-.45.45-1.05 1.08-1.05 1.83 0 1.38 2.31 1.56 4.71 1.56 3.21 0 6.15.48 6.15 3.99 0 3.75-3.27 4.92-6.63 4.92-2.91 0-6.63-1.05-6.63-4.68 0-.78.3-1.5.3-1.5.81-.33 1.71-.72 2.49-1.05-1.8-.81-2.49-2.34-2.49-3.15 0-1.2.72-2.4 1.68-3.39-.45-.75-.72-1.62-.72-2.7 0-3.09 2.34-5.07 5.34-5.07.99 0 1.95.24 2.7.6zm18.73 14.22h-2.4v-8.61c0-2.01-.6-3.99-2.97-3.99-2.34 0-4.26 2.01-4.26 4.35v8.22h-2.4v-14.61h2.4v2.25c.96-1.53 2.73-2.49 4.53-2.49 3.69 0 5.1 2.82 5.1 5.97z"
+            fill-opacity=".75" />
+          <path d="m6.81 24.85c2.7 0 3.3-1.56 3.3-4.26v-9.87h-7.83v-3.42h11.52v13.23c0 4.41-1.95 7.77-6.99 7.77-4.23 0-6.75-3.09-6.99-6.75l3.66-.42c.12 2.04 1.11 3.72 3.33 3.72zm17.05.36c2.7 0 3.78-2.07 3.78-4.47s-1.08-4.47-3.78-4.47-3.78 2.07-3.78 4.47 1.08 4.47 3.78 4.47zm0-12.03c4.53 0 7.65 3.42 7.65 7.56s-3.12 7.56-7.65 7.56-7.65-3.42-7.65-7.56 3.12-7.56 7.65-7.56zm17.61 15.12c-1.59 0-3.18-.51-4.23-1.77v1.47h-3.69v-20.7h3.69v7.53c1.11-1.35 2.67-1.77 4.23-1.77 3.96 0 6.24 3.57 6.24 7.62s-2.28 7.62-6.24 7.62zm-.93-12c-2.37 0-3.45 1.92-3.45 4.38s1.08 4.32 3.45 4.32c2.4 0 3.54-1.86 3.54-4.32 0-2.43-1.14-4.38-3.54-4.38zm27.18 11.7h-4.02l-1.62-4.5h-8.04l-1.59 4.5h-4.05l8.28-20.7h2.79zm-12.42-7.68h5.55l-2.76-7.53zm22.97-5.49v-7.53h3.63v20.7h-3.63v-1.47c-1.11 1.35-2.64 1.77-4.23 1.77-3.96 0-6.21-3.57-6.21-7.62s2.25-7.62 6.21-7.62c1.62 0 3.18.51 4.23 1.77zm-3.3 10.17c2.37 0 3.45-1.83 3.45-4.32 0-2.46-1.08-4.38-3.45-4.38-2.4 0-3.54 1.95-3.54 4.38 0 2.46 1.14 4.32 3.54 4.32zm19.67-10.17v-7.53h3.63v20.7h-3.63v-1.47c-1.11 1.35-2.64 1.77-4.23 1.77-3.96 0-6.21-3.57-6.21-7.62s2.25-7.62 6.21-7.62c1.62 0 3.18.51 4.23 1.77zm-3.3 10.17c2.37 0 3.45-1.83 3.45-4.32 0-2.46-1.08-4.38-3.45-4.38-2.4 0-3.54 1.95-3.54 4.38 0 2.46 1.14 4.32 3.54 4.32zm16.03-8.82c-2.01 0-3 1.32-3.27 3.09h6.63c-.24-1.98-1.26-3.09-3.36-3.09zm3.87 7.32 2.46 2.16c-1.71 1.83-3.66 2.52-6.09 2.52-4.89 0-7.29-3.51-7.29-7.41 0-3.84 2.25-7.59 7.05-7.59 5.31 0 6.87 3.78 6.87 7.56 0 .66-.12 1.11-.12 1.11h-10.05c.24 1.8 1.38 3 3.51 3 1.59 0 2.61-.27 3.66-1.35zm12.49-10.35c.9 0 2.13.21 2.97.87l.12.09-1.62 2.94-.15-.12c-.39-.3-.81-.39-1.47-.39-2.01 0-3.39 2.07-3.39 4.68v6.78h-3.45v-14.64h3.48v1.86c1.02-1.5 2.28-2.07 3.51-2.07z"
+          />
+        </g>
+      </svg>
+    </header>
+
+    <div class="wrap">
+
+      <div class="sidebar">
+        <ol>
+        </ol>
+      </div>
+
+      <div class="content" id="page-content">
+        <section>
+          <div class="card">
+            <h2>Logo</h2>
+            <p class="description">When written, JobAdder is always a single word with an uppercase ‘J’ & "A". The name is never split into two words.
+            </p>
+            <div class="span-full start-1 image-switcher">
+              <img src="images/logo-jobadder.svg">
+              <img src="images/logo-jobadder-hover.svg">
+            </div>
+            <p class="start-1 span-full">
+              <a class="btn" href="" target="_blank" class="download-link">Download Logos</a>
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="card">
+            <h2>Colors</h2>
+            <p class="description">We want to give meaning to color in JobAdder and use color in an intentional way.</p>
+            <h3 class="text-h3">Greys</h3>
+            <div class="color-card-container" style="grid-column-start: col-start 1;">
+              <div class="color-card bg-ink-1 white">
+                <span>Ink 1</span>
+                <span>222b3d</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-ink-2 white">
+                <span>Ink 2</span>
+                <span>424957</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-ink-3 white">
+                <span>Ink 3</span>
+                <span>666e7d</span>
+              </div>
+            </div>
+            <div class="color-card-container white">
+              <div class="color-card bg-ink-4">
+                <span>Ink 4</span>
+                <span>8c94a3</span>
+              </div>
+            </div>
+
+            <div class="color-card-container" style="grid-column-start: col-start 1;">
+              <div class="color-card bg-sky-1">
+                <span>Sky 1</span>
+                <span>f7f8fa</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-sky-2 ink-1">
+                <span>Sky 2</span>
+                <span>f0f2f5</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-sky-3 ink-1">
+                <span>Sky 3</span>
+                <span>dfe1e6</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-sky-4 ink-1">
+                <span>Sky 4</span>
+                <span>ccd0d9</span>
+              </div>
+            </div>
+
+            <h3 class="text-h3 start-1 span-full">Primary Colors</h3>
+
+            <div class="color-card-container" style="grid-column-start: col-start 1;">
+              <div class="color-card bg-blue white">
+                <span>Blue</span>
+                <span>1971c2</span>
+              </div>
+              <div class="color-card bg-blue-dark white">
+                <span>1864ab</span>
+              </div>
+              <div class="color-card bg-blue-light white">
+                <span>1c7ed6</span>
+              </div>
+              <div class="color-card bg-blue-background blue">
+                <span>e7f5ff</span>
+              </div>
+            </div>
+
+            <div class="color-card-container">
+              <div class="color-card bg-green white">
+                <span>Green</span>
+                <span>2F9E44</span>
+              </div>
+              <div class="color-card bg-green-dark white">
+                <span>2B8A3E</span>
+              </div>
+              <div class="color-card bg-green-light white">
+                <span>37B24D</span>
+              </div>
+              <div class="color-card bg-green-background green">
+                <span>EBFBEE</span>
+              </div>
+            </div>
+
+            <div class="color-card-container">
+              <div class="color-card bg-yellow white">
+                <span>Yellow</span>
+                <span>F08C00</span>
+              </div>
+              <div class="color-card bg-yellow-dark white">
+                <span>E67700</span>
+              </div>
+              <div class="color-card bg-yellow-light white">
+                <span>F59F00</span>
+              </div>
+              <div class="color-card bg-yellow-background yellow">
+                <span>FFF9DB</span>
+              </div>
+            </div>
+
+            <div class="color-card-container">
+              <div class="color-card bg-red white">
+                <span>Red</span>
+                <span>e03131</span>
+              </div>
+              <div class="color-card bg-red-dark white">
+                <span>c92a2</span>
+              </div>
+              <div class="color-card bg-red-light white">
+                <span>f03e3e</span>
+              </div>
+              <div class="color-card bg-red-background red">
+                <span>fff5f5</span>
+              </div>
+            </div>
+
+            <h3 class="text-h3 start-1 span-full">Status Colors</h3>
+
+            <div class="color-card-container" style="grid-column-start: col-start 1;">
+              <div class="color-card bg-orange white">
+                <span>Orange</span>
+                <span>E8590C</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-pink white">
+                <span>Pink</span>
+                <span>C2255C</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-grape white">
+                <span>Grape</span>
+                <span>9C36B5</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-violet white">
+                <span>Violet</span>
+                <span>6741D9</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-indigo white">
+                <span>Indigo</span>
+                <span>3B5BDB</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-cyan white">
+                <span>Cyan</span>
+                <span>0C8599</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-teal white">
+                <span>Teal</span>
+                <span>099268</span>
+              </div>
+            </div>
+            <div class="color-card-container">
+              <div class="color-card bg-lime white">
+                <span>Lime</span>
+                <span>66A80F</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section>
+          <div class="card">
+            <h2>Typography</h2>
+            <p class="description">We use a System Font Stack giving text in JobAdder a clean clear look making the information heavy app digestible.</p>
+            <p class="typography-example text-hero ink-1">Hero - 600/42/44</p>
+            <p class="typography-example text-h1 ink-1">Heading 1 - 600/28/32</p>
+            <p class="typography-example text-h2 ink-1">Heading 2 - 400/26/32</p>
+            <p class="typography-example text-h3 ink-1">Heading 3 - 400/20/24</p>
+            <p class="typography-example text-h4 ink-1">Heading 4 - 600/16/24</p>
+            <p class="typography-example text-h5 ink-1">Heading 5 - 700/12/26/Uppercase</p>
+            <p class="typography-example text-body ink-1">Body text - 400/14/20</p>
+            <p class="typography-example text-caption ink-1">Caption - 400/12/16</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="card">
+
+            <h2>Buttons</h2>
+            <p class="description">Copy re buttons</p>
+
+            <h3 class="start-1 span-full text-h3">Standard buttons</h3>
+            <div class="button-container start-1 span-full ">
+
+              <button type="button" class="Venom-Button">
+                <span class="Venom-Button__Content">
+                  <span>Default Button</span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button Venom-Button--primary">
+                <span class="Venom-Button__Content">
+                  <span>Primary Button</span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button Venom-Button--destructive">
+                <span class="Venom-Button__Content">
+                  <span>Destructive Button</span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button Venom-Button--plain">
+                <span class="Venom-Button__Content">
+                  <span>Plain Button</span>
+                </span>
+              </button>
+
+              <!-- <br><br>
+              <button class="btn btn-primary"> Primary </button>
+              <button class="btn"> Default </button>
+              <button class="btn btn-destructive"> Destructive </button>
+              <button class="btn btn-ghost"> Ghost </button> -->
+
+            </div>
+
+            <h3 class="start-1 span-full text-h3">Icon buttons</h3>
+            <div class="button-container start-1 span-full ">
+
+              <button type="button" class="Venom-Button">
+                <span class="Venom-Button__Content">
+                  <span class="Venom-Button__Icon">
+                    <span class="Venom-Icon">
+                      <svg class="Venom-Icon__Svg" viewBox="0 0 20 20" focusable="false" aria-hidden="true"><path d="M11 17V5.414l3.293 3.293a.999.999 0 1 0 1.414-1.414l-5-5a.999.999 0 0 0-1.414 0l-5 5a.997.997 0 0 0 0 1.414.999.999 0 0 0 1.414 0L9 5.414V17a1 1 0 1 0 2 0" fill-rule="evenodd"></path></svg>
+                    </span>
+                  </span>
+                  <span>Action with icon</span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button Venom-Button--iconOnly">
+                <span class="Venom-Button__Content">
+                  <span class="Venom-Button__Icon">
+                    <span class="Venom-Icon">
+                      <svg class="Venom-Icon__Svg" viewBox="0 0 20 20" focusable="false" aria-hidden="true"><path d="M16 8c0-2.967-2.167-5.432-5-5.91V1a1 1 0 1 0-2 0v1.09C6.167 2.568 4 5.033 4 8c0 2.957 0 4.586-1.707 6.293A1 1 0 0 0 3 16h4.183A2.909 2.909 0 0 0 7 17c0 1.654 1.345 3 3 3s3-1.346 3-3c0-.353-.07-.687-.184-1H17a1 1 0 0 0 .707-1.707C16 12.586 16 10.957 16 8zM5.011 14C6 12.208 6 10.285 6 8c0-2.206 1.794-4 4-4s4 1.794 4 4c0 2.285 0 4.208.989 6H5.011zM11 17a1.001 1.001 0 0 1-2 0 1 1 0 0 1 2 0z"></path></svg>
+                    </span>
+                  </span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button Venom-Button--plain Venom-Button--iconOnly">
+                <span class="Venom-Button__Content">
+                  <span class="Venom-Button__Icon">
+                    <span class="Venom-Icon">
+                      <svg class="Venom-Icon__Svg" viewBox="0 0 20 20" focusable="false" aria-hidden="true"><path d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-8h2V6H9v4zm0 4h2v-2H9v2z" fill-rule="evenodd"></path></svg>
+                    </span>
+                  </span>
+                </span>
+              </button>
+
+              <button type="button" class="Venom-Button">
+                <span class="Venom-Button__Content">
+                  <span>More Actions</span>
+                  <span class="Venom-Button__Icon">
+                    <span class="Venom-Icon">
+                      <svg class="Venom-Icon__Svg" viewBox="0 0 20 20" focusable="false" aria-hidden="true"><path d="M5 8l5 5 5-5z" fill-rule="evenodd"></path></svg>
+                    </span>
+                  </span>
+                </span>
+              </button>
+
+          </div>
+
+          <h3 class="start-1 span-full text-h3">Button groups</h3>
+          <div class="button-container start-1 span-full ">
+
+
+          </div>
+
+
+
+        </section>
+        <!-- <section id="scroll-nav-3">
+          <h2>Iconography</h2>
+          <p class="description">We strive to create iconography unique to Duolingo by infusing our symbols with Duolingo's unmistakable illustration style. We avoid the generic, all while making sure our icons remain universally recognizable.</p>
+          <img class="start-1 icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-1.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-2.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-3.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-4.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-5.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-6.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-7.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/skills/img-icn-skill-8.svg">
+          <img class="start-1 icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-1.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-2.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-3.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-4.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-5.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-6.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-7.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/clubs/img-icn-club-8.svg">
+          <img class="start-1 icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-1.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-2.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-3.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-4.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-5.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-6.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-7.svg">
+          <img class="icon" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/icons/icon-8.svg">
+          <img class="start-1 icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-1.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-2.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-3.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-4.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-5.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-6.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-7.svg">
+          <img class="icon glyph" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/iconography/glyphs/glyph-8.svg">
+        </section>
+        <section id="scroll-nav-4">
+          <h2>Illustration</h2>
+          <p class="description">All illustrations are geometric and created with wholes, halves and quarters of four basic shapes. Restraint is shown when applying detail to prevent artwork from appearing noisy at smaller sizes.</p>
+          <div class="span-3 start-1 illustration">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/illustration/img-shapes.svg">
+          </div>
+          <div class="span-5 illustration">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/illustration/img-grid-trophy.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/illustration/img-full-trophy.svg">
+          </div>
+        </section>
+        <section id="scroll-nav-5">
+          <h2>Buttons/Links</h2>
+          <p class="description" style="margin-bottom: 0;">Duolingo lessons involve a lot of button presses, so we designed our buttons to be colorful, prominent and fun to tap. Button sizes and behavior remain consistent across all platforms and screen sizes.</p>
+          <div class="half-grid start-1 span-4">
+            <h3 class="start-1 span-4">Primary Button</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Height: 48px</div>
+                <div class="spaced-text-line">Radius: 24px</div>
+                <div class="spaced-text-line">Left/Right padding: 20px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 15px</div>
+                <div class="spaced-text-line">Font weight: 700</div>
+                <div class="spaced-text-line">Spacing: 0.6px</div>
+                <div class="spaced-text-line">Icon (optional): 22x22px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Pressed: 20% #000 overlay</div>
+                <div class="spaced-text-line">Disabled button: 10% #000</div>
+                <div class="spaced-text-line">Disabled text: 20% #000</div>
+              </div>
+            </div>
+            <div class="justify-column span-2">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/primary/btn-primary.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/primary/btn-primary-icon.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/primary/button-primary-pressed.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/primary/btn-primary-disabled.svg">
+            </div>
+          </div>
+          <div class="half-grid span-4 nudge-right">
+            <h3 class="span-4">Compact Primary Button</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Height: 32px</div>
+                <div class="spaced-text-line">Radius: 16px</div>
+                <div class="spaced-text-line">Left/Right padding: 12px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 15px</div>
+                <div class="spaced-text-line">Font weight: 700</div>
+                <div class="spaced-text-line">Spacing: 0.6px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Pressed: 20% #000 overlay</div>
+                <div class="spaced-text-line">Disabled button: 10% #000</div>
+                <div class="spaced-text-line">Disabled text: 20% #000</div>
+              </div>
+            </div>
+            <div class="span-2">
+              <img class="compact-btn" style="margin-bottom: 10px;" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact/btn-compact-primary.svg">
+              <img class="compact-btn" style="margin-bottom: 10px;" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact/btn-compact-pressed.svg">
+              <img class="compact-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact/btn-compact-primary-disabled.svg">
+            </div>
+          </div>
+          <div class="half-grid start-1 span-4">
+            <h3 class="start-1 span-4">Secondary Button</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Height: 48px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 15px</div>
+                <div class="spaced-text-line">Font weight: 700</div>
+                <div class="spaced-text-line">Spacing: 0.6px</div>
+                <div class="spaced-text-line">Icon (optional): 22x22px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Pressed: 20% #000 overlay</div>
+                <div class="spaced-text-line">Disabled: 20% #000</div>
+              </div>
+            </div>
+            <div class="justify-column span-2">
+              <img class="secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/secondary/btn-secondary.svg">
+              <img class="secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/secondary/btn-secondary-icon.svg">
+              <img class="secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/secondary/btn-secondary-pressed.svg">
+              <img class="secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/secondary/btn-secondary-disabled.svg">
+            </div>
+          </div>
+          <div class="half-grid span-4 nudge-right">
+            <h3 class="span-4">Compact Secondary Button</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Height: 32px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 15px</div>
+                <div class="spaced-text-line">Font weight: 700</div>
+                <div class="spaced-text-line">Spacing: 0.6px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Pressed: 20% #000 overlay</div>
+                <div class="spaced-text-line">Disabled: 20% #000</div>
+              </div>
+            </div>
+            <div class="span-2">
+              <img class="compact-secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact-secondary/btn-compact-secondary.svg">
+              <img class="compact-secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact-secondary/btn-compact-secondary-pressed.svg">
+              <img class="compact-secondary-btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/compact-secondary/btn-compact-secondary-disabled.svg">
+            </div>
+          </div>
+          <div class="half-grid span-4 start-1">
+            <h3 class="start-1 span-4">Stroked Button</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Min. Height: 48px</div>
+                <div class="spaced-text-line">Radius: 24px</div>
+                <div class="spaced-text-line">Left/Right padding: 20px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 17px</div>
+                <div class="spaced-text-line">Font weight: 300</div>
+                <div class="spaced-text-line">Spacing: 0px</div>
+                <div class="spaced-text-line">Icon (optional): 18x18px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Pressed: 20% #000 overlay</div>
+                <div class="spaced-text-line">Pressed inactive: 20% #000 fill</div>
+              </div>
+            </div>
+            <div class="justify-column span-2">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/stroked/btn-stroked-inactive.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/stroked/btn-stroked-pressed-inactive.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/stroked/btn-stroked-active.svg">
+              <img class="btn" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/stroked/btn-stroked-pressed-active.svg">
+            </div>
+          </div>
+          <div class="half-grid span-4 nudge-right">
+            <h3 class="span-4">Tap Tokens</h3>
+            <div class="span-2 justify-column">
+              <div class="text-block">
+                <div class="spaced-text-line">Height: 40px</div>
+                <div class="spaced-text-line">Radius: 0px</div>
+                <div class="spaced-text-line">Left/Right padding: 10px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Font size: 17px</div>
+                <div class="spaced-text-line">Font weight: 300</div>
+                <div class="spaced-text-line">Spacing: 0px</div>
+              </div>
+              <div class="text-block">
+                <div class="spaced-text-line">Shadow: y=2, blur=8, 20% #000</div>
+                <div class="spaced-text-line">Pressed: 5% #000 overlay</div>
+                <div class="spaced-text-line">Empty: #DDDDDD</div>
+              </div>
+            </div>
+            <div class="span-2">
+              <img class="tap-btn" style="display: block;" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/tap-tokens/btn-tap-token.svg">
+              <img class="tap-btn" style="display: block;" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/tap-tokens/btn-tap-token-pressed.svg">
+              <img class="tap-btn" style="display: block;" src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/buttons/tap-tokens/btn-tap-token-empty.svg">
+            </div>
+          </div>
+        </section>
+        <section id="scroll-nav-6">
+          <h2>Input</h2>
+          <p class="description" style="margin-bottom: 0;">Whether it's a web form, a challenge in a Lesson or speech functionality, our input fields are designed to minimize friction between the learner and the action.</p>
+          <div class="span-4 start-1">
+            <h3>Text input</h3>
+            <div class="text-block">
+              <div class="spaced-text-line">Height: 50px</div>
+              <div class="spaced-text-line">Radius: 8px</div>
+              <div class="spaced-text-line">Left/Right padding: 20px</div>
+            </div>
+            <div class="text-block">
+              <div class="spaced-text-line">Font size: 17px</div>
+              <div class="spaced-text-line">Inactive font weight: 300</div>
+              <div class="spaced-text-line">Active font weight: 500</div>
+              <div class="spaced-text-line">Spacing: 0px</div>
+            </div>
+            <div class="text-block">
+              <div class="spaced-text-line">Inactive border: #CFCFCF</div>
+              <div class="spaced-text-line">Active border: #1CB0F6</div>
+            </div>
+          </div>
+          <div class="inputs span-4 justify-column justify-end" style="padding-top: 70px;">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-field-inactive.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-field-focused.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-field-active.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-field-input.svg">
+          </div>
+          <div class="span-4 start-1">
+            <h3>Chat text input</h3>
+            <div class="text-block">
+              <div class="spaced-text-line">Height: 50px</div>
+              <div class="spaced-text-line">Radius: 0px</div>
+              <div class="spaced-text-line">Left inner padding: 20px</div>
+              <div class="spaced-text-line">Right inner padding: 5px</div>
+            </div>
+            <div class="text-block">
+              <div class="spaced-text-line">Font size: 17px</div>
+              <div class="spaced-text-line">Font weight: 300</div>
+              <div class="spaced-text-line">Border: #DDDDDD</div>
+              <div class="spaced-text-line">Icon: 40x40px</div>
+            </div>
+          </div>
+          <div class="inputs span-4 justify-column justify-end" style="padding-top: 70px;">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-chat-active.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-chat-inactive.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-chat-input.svg">
+            <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/input/text-chat-voice.svg">
+          </div>
+        </section>
+        <section id="scroll-nav-7">
+          <h2>Navigation</h2>
+          <h3 class="span-4" style="padding-top: 0;">Desktop Navigation</h3>
+          <p class="description" style="margin-bottom: 30px;">Duolingo’s familiar blue bar contains links to the most important pages on Duolingo.com and can shrink to fit smaller screen sizes.</p>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/navigation/img-desktop-nav.svg" class="span-full">
+          <h3 class="span-4">Mobile Tabs</h3>
+          <p class="description" style="margin-bottom: 30px;">When the screen width becomes narrow enough, we switch to icon based navigation with labels only appearing below the active icon.</p>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/navigation/img-mobile-tabs.svg" class="span-full">
+          <h3 class="span-4">Secondary Tabs</h3>
+          <p class="description" style="margin-bottom: 30px;">When additional navigation is required within one of the Primary Tabs, subtly stroked labels are used so as to not compete with with the Primary navigation.</p>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/navigation/img-secondary-tabs.svg" class="span-full">
+        </section>
+        <section class="progress" id="scroll-nav-8">
+          <h2>Progress</h2>
+          <p class="description">We make it fun to learn a new language by making it rewarding to monitor your progress.</p>
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3 style="padding-top: 0;">Streak</h3>
+            <p class="description">Learners keep their Streak active by reaching a set goal every day. Some streaks are over 1,000 days long!</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-streak.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Skill Strength</h3>
+            <p class="description">Practice a Skill until you know it so well that it’s encased in gold.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-skill-strength.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Progress Bar</h3>
+            <p class="description">Tracks progress in a lesson, moving forward and backward to match correct and incorrect answers.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-progress-bar.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 3;">
+            <h3>Grading Ribbon</h3>
+            <p class="description">Appears after a learner hits 'Continue', congratulating or correcting learners.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-grading-ribbon.svg" style="grid-row-end: span 3;">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Rewards</h3>
+            <p class="description">We want Duolingo to feel as fun as a game, so we surprise learners with delightful rewards.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-rewards.png" srcset="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/progress/img-rewards@2x.png 2x">
+        </section>
+        <section class="exercises" id="scroll-nav-9">
+          <h2>Exercises</h2>
+          <p class="description">Duolingo breaks Lessons down into bitesize chunks (Exercises) to help people learn a new language, all while feeling encouraged instead of overwhelmed.</p>
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3 style="padding-top: 0;">Tap</h3>
+            <p class="description">Construct a sentence without having to produce words entirely from memory.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-tap-tokens.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Speak</h3>
+            <p class="description">Tap the microphone and say a sentence aloud.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-speak.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Translate</h3>
+            <p class="description">Translate a sentence between languages from memory.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-translate.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Fill in the blank</h3>
+            <p class="description">An underscored line indicates a missing word. Use radio buttons to select the correct answer.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-fill-in-blank.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Match</h3>
+            <p class="description">Tap the tokens to match words between languages.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-match.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+          </div>
+          <h3 class="start-1">Select</h3>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-select.svg" class="start-6 span-3" style="grid-row-end: span 3; padding-top: 70px; justify-self: center;">
+          <p class="description" style="grid-row-end: span 2;">Identify the correct object, using helpful illustrations as a guide.</p>
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Assist</h3>
+            <p class="description">Identify a word by choosing from three options, without an illustrative aid.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-assist.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Name</h3>
+            <p class="description">Translate the name of an object while also selecting the correct plural or singular article.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-name.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Listen</h3>
+            <p class="description">Listen to a sentence and type the words you hear. Tap the turtle icon to hear the sentence read slowly.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-listen.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Judge</h3>
+            <p class="description">Read a sentence and select the correct translation(s).</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-judge.svg">
+          <div class="start-1 span-4" style="grid-row-end: span 2;">
+            <h3>Character Introduction</h3>
+            <p class="description">Identify what sound a Character makes. Currently only available for East Asian language courses.</p>
+          </div>
+          <img src="//d7mj4aqfscim2.cloudfront.net/images/design-guidelines/exercises/img-character.svg">
+        </section> -->
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
