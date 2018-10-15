@@ -1,4 +1,4 @@
-.Venom-Button {
+.venom-button {
   fill: $blue;
   position: relative;
   display: -ms-inline-flexbox;
@@ -120,7 +120,7 @@
     }
   }
 
-  &__Icon {
+  &__icon {
     transition: color 0.2s cubic-bezier(.64,0,.35,1);
 
     &:first-child {
